@@ -10,15 +10,14 @@ public class Video extends ElementoMultimediale implements Riproducibile {
         super(titolo);
 
 
-
     }
 
-    public int aumentaLuminosita(){
+    public int aumentaLuminosita() {
 
         return getLuminosita() + 1;
     }
 
-    public int diminuisciLuminosita(){
+    public int diminuisciLuminosita() {
         return getLuminosita() - 1;
     }
 
@@ -34,9 +33,9 @@ public class Video extends ElementoMultimediale implements Riproducibile {
 
     @Override
     public void play() {
-        for(int i = 0; i< durata(); i++){
+        for (int i = 0; i < durata(); i++) {
             System.out.print(getTitolo());
-            for (int j = 0; j< getLuminosita(); j++){
+            for (int j = 0; j < getLuminosita(); j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -55,7 +54,8 @@ public class Video extends ElementoMultimediale implements Riproducibile {
     @Override
     public String toString() {
         return "Video{" +
-                "luminosita=" + getLuminosita() +
+                "titolo=" + getTitolo() +
+                ", luminosita=" + getLuminosita() +
                 '}';
     }
 }
